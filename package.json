@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "homepage": "https://ganjioppa77.github.io/stockTracker",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
@@ -10,6 +11,8 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "heroku-postbuild": "npm run build"
   },
   "author": "",
@@ -21,6 +24,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.3",
+    "gh-pages": "^2.0.1",
     "if-env": "^1.0.4"
   }
 }
